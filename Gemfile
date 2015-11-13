@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'devise'
+
 gem 'mysql2', '0.3.18'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
