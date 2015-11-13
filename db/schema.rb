@@ -42,11 +42,10 @@ ActiveRecord::Schema.define(version: 20151113185330) do
   add_index "follows", ["follower_id", "follower_type"], name: "fk_follows", using: :btree
 
   create_table "friendposts", force: :cascade do |t|
-    t.integer  "user_a",     limit: 4
-    t.integer  "user_b",     limit: 4
-    t.text     "content",    limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.integer  "user_id",    limit: 4
+    t.integer  "post_id",    limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "posts", force: :cascade do |t|
@@ -55,6 +54,7 @@ ActiveRecord::Schema.define(version: 20151113185330) do
     t.integer  "status",         limit: 4
     t.integer  "comments_count", limit: 4
     t.integer  "likes_count",    limit: 4
+    t.boolean  "friend_post",    limit: 1
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
   end

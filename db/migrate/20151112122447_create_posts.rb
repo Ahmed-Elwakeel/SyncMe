@@ -7,6 +7,7 @@ class CreatePosts < ActiveRecord::Migration
       t.integer :status
       t.integer :comments_count
       t.integer :likes_count
+      t.boolean :friend_post
       t.timestamps null: false
     end
   end
