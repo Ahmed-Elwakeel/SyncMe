@@ -5,6 +5,9 @@ class Post < ActiveRecord::Base
 	acts_as_commentable 
 	acts_as_votable
 
+	mount_uploader :content, AvatarUploader
+
+
 	validates_presence_of :content
  	validates_presence_of :user
 end

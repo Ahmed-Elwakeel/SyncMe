@@ -10,6 +10,9 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :comments
 
+  mount_uploader :avatar, AvatarUploader
+  mount_uploader :cover, AvatarUploader
+
   validates_presence_of :name
 
  
