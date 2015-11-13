@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  act_as_voter
+  acts_as_voter
   acts_as_follower
   acts_as_followable
   has_many :posts
