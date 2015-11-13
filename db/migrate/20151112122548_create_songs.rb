@@ -1,7 +1,7 @@
 class CreateSongs < ActiveRecord::Migration
   def change
     create_table :songs do |t|
-      t.text :content
+      t.integer :post_id
 
       t.timestamps null: false
     end

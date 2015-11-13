@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(version: 20151113135136) do
 
   create_table "posts", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
-    t.integer  "post_id",    limit: 4
     t.text     "content",    limit: 65535
+    t.integer  "status",     limit: 4
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
@@ -62,18 +62,10 @@ ActiveRecord::Schema.define(version: 20151113135136) do
     t.integer "song_id", limit: 4, null: false
   end
 
-  create_table "songpostusers", force: :cascade do |t|
-    t.integer  "song_id",    limit: 4
+  create_table "songs", force: :cascade do |t|
     t.integer  "post_id",    limit: 4
-    t.integer  "user_id",    limit: 4
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
-  end
-
-  create_table "songs", force: :cascade do |t|
-    t.text     "content",    limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
   end
 
   create_table "users", force: :cascade do |t|
