@@ -14,4 +14,10 @@ end
   def destroy
     current_user.stop_following(followable)
   end
+
+private
+   def follow_params
+      params.require(:post).permit(:content , :user_id)
+   end
+
 end
