@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
    resources :users do
-    resources :follows, :controller => 'follows_users', :only => [:create, :destroy]
+    resources :follows, :only => [:index, :create, :destroy]
     resources :posts do
       resources :comments
     end

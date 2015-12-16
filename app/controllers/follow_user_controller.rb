@@ -4,7 +4,5 @@ class FollowsUsersController < FollowsController
     @followable ||= User.find(params[:user_id])
   end
 
-
-
   
 end
